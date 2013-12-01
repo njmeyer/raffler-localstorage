@@ -14,15 +14,13 @@
 		<input id="new-name" size="60" autofocus>
 		<input type="submit" value="New" id="newvalue">
 		<input type="submit" value="Draw Winner" id="draw"/>
-    <ul id="name-list">
+	<ul id="name-list">
       <% _.each(entries, function(entry){ %>
-	<label class="entry-name">
-	  <li id='<%- entry.id %>'><input type="submit" value="Delete" id='delete'><%- entry.name %><span class="entry-winner"><% if (entry.winner) {%>WINNER<% } %></span></li>
-	</label>
+  	  <li id='<%- entry.id %>'><%- entry.name %><span class="entry-winner"><% if (entry.winner) {%>WINNER<% } %></span></li>
       <% }); %>
-    </ul>
+	</ul>
  	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js" type="text/javascript"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js" type="text/javascript"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.0/backbone.localStorage-min.js" type="text/javascript"></script>
